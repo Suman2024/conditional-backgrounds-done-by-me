@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>conditional statements</title>
+    <style>
+        body
+        {
+            color: blue;
+            background-color: rgb(41, 20, 101);
+        }
+        #one,#two,#three,#four
+        {
+            color: chartreuse;
+            background-color: aqua grey;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 id="one"><marquee direction="right">if condition</marquee></h1>
+    {% if a > 10 %}
+       <h2>a is maxx {{a}}</h2>
+    {% endif %}
+    <h1 id="two">if else condition</h1>
+    {% if a > b %}
+       <h2>a is maxx {{a}}</h2>
+    {% else %}
+       <h2>b maxx {{b}}</h2>
+    {% endif %}
+    <h1 id="three">if elif condition</h1>
+    {% if a > b and a > c %}
+       <h2>a is maxx {{a}}</h2>
+    {% elif b > c %}
+       <h2>b is maxx {{b}}</h2>
+    {% else %}
+    <h2> c is maxx {{c}}</h2>
+    {% endif %}
+    <h1 id="four">nested if condition </h1>
+    {% if a > b %}
+        {% if a > c %}
+            <h2>a is maxx {{a}}</h2>
+        {% else %}
+            <H2>c is maxx {{c}}</H2>
+        {% endif%}
+    {% else %}
+        {% if b > c%}
+          <h2> b is maxx {{b}}</h2>
+        {% else %}
+          <h2> c is maxx {{c}}</h2>
+        {% endif %}
+    {% endif %}
+       
+
+</body>
+</html>
